@@ -1,22 +1,17 @@
 import random, time
 import numpy as np
-
-prev=[]
-curr=[]
+prev=[]*10
+curr=[]*10
 while 1:
-  for i in range (10):
-    i=random.randint(0,4)
-    prev.extend([i])
+  prev =[random.randint(0,4)]*10
   print (prev)
   time.sleep(0.5)
-  for i in range (10):
-    i=random.randint(0,4)
-    curr.extend([i])
+  curr=[random.randint(0,4)]*10
   print(curr)
   time.sleep(0.5)
-  diff=np.subctract(curr, prev)
   if (prev > curr):
     prev=[0]*10
     print("prev di reset")
-    
- 
+  diff=np.subtract(curr, prev)
+  print ("beda",diff)
+
